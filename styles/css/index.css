@@ -356,7 +356,7 @@ input[type=file],legend{display:block}
 .col-lg-offset-2{margin-left:16.66666667%}
 .col-lg-offset-1{margin-left:8.33333333%}
 }
-.table{width:100%;margin-bottom:20px}
+/* .table{width:100%;margin-bottom:20px}
 .table>tbody>tr>td,.table>tbody>tr>th,.table>tfoot>tr>td,.table>tfoot>tr>th,.table>thead>tr>td,.table>thead>tr>th{padding:8px;line-height:1.42857143;vertical-align:top;border-top:1px solid #ddd}
 .table>thead>tr>th{vertical-align:bottom;border-bottom:2px solid #ddd;text-align:center}
 .table>caption+thead>tr:first-child>td,.table>caption+thead>tr:first-child>th,.table>colgroup+thead>tr:first-child>td,.table>colgroup+thead>tr:first-child>th,.table>thead:first-child>tr:first-child>td,.table>thead:first-child>tr:first-child>th{border-top:0}
@@ -383,7 +383,120 @@ table td[class*=col-],table th[class*=col-]{float:none;display:table-cell}
 .table-responsive>.table-bordered>tbody>tr>td:first-child,.table-responsive>.table-bordered>tbody>tr>th:first-child,.table-responsive>.table-bordered>tfoot>tr>td:first-child,.table-responsive>.table-bordered>tfoot>tr>th:first-child,.table-responsive>.table-bordered>thead>tr>td:first-child,.table-responsive>.table-bordered>thead>tr>th:first-child{border-left:0}
 .table-responsive>.table-bordered>tbody>tr>td:last-child,.table-responsive>.table-bordered>tbody>tr>th:last-child,.table-responsive>.table-bordered>tfoot>tr>td:last-child,.table-responsive>.table-bordered>tfoot>tr>th:last-child,.table-responsive>.table-bordered>thead>tr>td:last-child,.table-responsive>.table-bordered>thead>tr>th:last-child{border-right:0}
 .table-responsive>.table-bordered>tbody>tr:last-child>td,.table-responsive>.table-bordered>tbody>tr:last-child>th,.table-responsive>.table-bordered>tfoot>tr:last-child>td,.table-responsive>.table-bordered>tfoot>tr:last-child>th{border-bottom:0}
-}
+} */
+ /* 基本表格样式 */
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 表格内单元格的 padding 和边框 */
+  .table>tbody>tr>td,
+  .table>tbody>tr>th,
+  .table>tfoot>tr>td,
+  .table>tfoot>tr>th,
+  .table>thead>tr>td,
+  .table>thead>tr>th {
+    padding: 12px;
+    text-align: left;
+    line-height: 1.6;
+    vertical-align: middle;
+    border-top: 1px solid #ddd;
+  }
+  
+  /* 表头样式 */
+  .table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1em;
+  }
+  
+  /* 表格的响应式布局 */
+  .table-responsive {
+    overflow-x: auto;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  .table-responsive>.table {
+    margin-bottom: 0;
+  }
+  
+  .table-responsive>.table>tbody>tr>td,
+  .table-responsive>.table>tbody>tr>th,
+  .table-responsive>.table>tfoot>tr>td,
+  .table-responsive>.table>tfoot>tr>th,
+  .table-responsive>.table>thead>tr>td,
+  .table-responsive>.table>thead>tr>th {
+    white-space: nowrap;
+  }
+  
+  /* 交替行的背景色 */
+  .table-striped>tbody>tr:nth-child(odd)>td,
+  .table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: #f9f9f9;
+  }
+  
+  /* 鼠标悬停行的效果 */
+  .table-hover>tbody>tr:hover>td,
+  .table-hover>tbody>tr:hover>th {
+    background-color: #f1f1f1;
+  }
+  
+  /* 样式化成功、警告、危险行 */
+  .table>tbody>tr.success>td,
+  .table>tbody>tr.success>th {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+  }
+  
+  .table>tbody>tr.warning>td,
+  .table>tbody>tr.warning>th {
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+  }
+  
+  .table>tbody>tr.danger>td,
+  .table>tbody>tr.danger>th {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+  }
+  
+  /* 响应式：当宽度小于 768px 时，表格会出现横向滚动条 */
+  @media (max-width: 767px) {
+    .table-responsive {
+      width: 100%;
+      overflow-x: scroll;
+    }
+  }
+  
+  /* 特定的列宽设置，如果有需要 */
+  .table td, .table th {
+    width: auto; /* 使列宽根据内容自适应 */
+  }
+  
+  /* 表格边框样式 */
+  .table-bordered,
+  .table-bordered>tbody>tr>td,
+  .table-bordered>tbody>tr>th,
+  .table-bordered>tfoot>tr>td,
+  .table-bordered>tfoot>tr>th,
+  .table-bordered>thead>tr>td,
+  .table-bordered>thead>tr>th {
+    border: 1px solid #ddd;
+  }
+  
+  /* 细节改进 */
+  .table-bordered>thead>tr>th {
+    border-bottom-width: 2px;
+    background-color: #f1f1f1;
+  }
+  
 fieldset,legend{padding:0;border:0}
 fieldset{margin:0}
 legend{width:100%;margin-bottom:20px;font-size:21px;line-height:inherit;border-bottom:1px solid #e5e5e5}
