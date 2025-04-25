@@ -1,4 +1,6 @@
 <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+  <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+  <script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
   <div class="container">
     <div class="navbar-header">
       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
@@ -17,9 +19,9 @@
           <a href="{{ '/' | prepend: site.baseurl }}">首页</a>
         </li>
         <li>
-          <!-- <a href="{{ '/categories/' | prepend: site.baseurl }}">博文分类</a>
+          <a href="{{ '/categories/' | prepend: site.baseurl }}">博文分类</a>
         </li>
-        <li>
+        <!-- <li>
           <a href="{{ '/tag' | prepend: site.baseurl }}">标签目录</a>
         </li> -->
       </ul>
