@@ -1,16 +1,16 @@
 # Site settings
 name: XinbeiCai's Blog
 email: xinbeicai@126.com
-author: M/J
+author: cxb
 url: https://xinbeicai.github.io
 # resume_site: http://xiaokedada.com/me/
 github: https://github.com/XinbeiCai
-baseurl: ""  #根目录
-description: 成为更好的人吧！！！！
+baseurl: ""  # 根目录
+description: 成为更好的人吧！！！！ 
 motto: 落底会反弹
 banner: 别怕路远，走着走着就近了。
 permalink: /:year/:month/:day/:title/
-excerpt_separator:  '<!-- more -->' #文章摘要
+excerpt_separator:  '<!-- more -->' # 文章摘要
 paginate: 8
 paginate_path: "page:num"
 gems: [jekyll-paginate]
@@ -23,3 +23,5 @@ FB:
     provider : disqus
     disqus :
         short_name : xinbeicai
+mathjax:
+  enable: true  # 如果你选择 MathJax
