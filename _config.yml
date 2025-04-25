@@ -7,8 +7,8 @@ url: https://xinbeicai.github.io
 github: https://github.com/XinbeiCai
 baseurl: ""  # 根目录
 description: 成为更好的人吧！！！！ 
-motto: 触底会反弹
-banner: 别怕路远，走着走着就近了。
+motto: Welcome to my home
+banner: 触底会反弹
 permalink: /:year/:month/:day/:title/
 excerpt_separator:  '<!-- more -->' # 文章摘要
 paginate: 8
