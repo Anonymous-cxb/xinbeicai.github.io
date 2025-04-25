@@ -3,11 +3,11 @@ name: XinbeiCai's Blog
 email: xinbeicai@126.com
 author: M/J
 url: https://xinbeicai.github.io
-resume_site: http://xiaokedada.com/me/
+# resume_site: http://xiaokedada.com/me/
 github: https://github.com/XinbeiCai
 baseurl: ""  #根目录
 description: 成为更好的人吧！！！！
-motto: 如果一件事情不是好结局，也会是一段好故事
+motto: 落底会反弹
 banner: 别怕路远，走着走着就近了。
 permalink: /:year/:month/:day/:title/
 excerpt_separator:  '<!-- more -->' #文章摘要
@@ -15,11 +15,11 @@ paginate: 8
 paginate_path: "page:num"
 gems: [jekyll-paginate]
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
-github_username: maoxiaoke
+github_username: XinbeiCau
 highlighter: rouge
 markdown: kramdown
 FB:
   comments :
     provider : disqus
     disqus :
-        short_name : xiaokedada
+        short_name : xinbeicai
