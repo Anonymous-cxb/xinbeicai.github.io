@@ -23,7 +23,7 @@ FB:
     provider : disqus
     disqus :
         short_name : xinbeicai
-# mathjax:
-#   enable: true  # 如果你选择 MathJax
-kramdown:
-  math_engine: mathjax
+mathjax:
+  enable: true  # 如果你选择 MathJax
+# kramdown:
+#   math_engine: mathjax
