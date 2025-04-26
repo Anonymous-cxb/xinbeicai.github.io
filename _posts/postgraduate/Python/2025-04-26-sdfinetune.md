@@ -83,17 +83,13 @@ Textual Inversion 的本质是：
 
 没有用<cat-toy>微调：
 
-![image-20250426235121277](\_posts\postgraduate\Python\styles\images\blog\image-20250426235121277.png)
+![image-20250426235542228](https://s2.loli.net/2025/04/27/RjOM2frV8cxTaAY.png)
 
 
 
 用了<cat-toy>微调
 
-![image-20250426235138092](\_posts\postgraduate\Python\styles\images\blog\image-20250426235138092.png)
-
-
-
-
+![image-20250426235138092](https://s2.loli.net/2025/04/27/27VO5oGKzXfJ3Z6.png)
 
 ## LoRA
 
