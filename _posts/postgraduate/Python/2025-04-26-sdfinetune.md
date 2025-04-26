@@ -83,13 +83,13 @@ Textual Inversion 的本质是：
 
 没有用<cat-toy>微调：
 
-<img src="styles/images/blog/output-1745680833888-2.png" alt="output" style="zoom:50%;" />
+<img src="./styles/images/blog/image-20250426233659751.png" alt="image-20250426233659751" style="zoom:50%;" />
 
 
 
 用了<cat-toy>微调
 
-<img src="styles/images/blog/image-20250426231834707.png" alt="image-20250426231834707" style="zoom:67%;" />
+<img src="./styles/images/blog/image-20250426233709004.png" alt="image-20250426233709004" style="zoom: 67%;" />
 
 
 
