@@ -18,6 +18,10 @@ Stable Diffusion 是一种 **文本引导的潜空间扩散模型（Latent Diffu
 
 >本文介绍了不同的stable diffusion的微调方法
 
+
+
+<!-- more -->
+
 # Stable Diffusion 微调方法
 
 
