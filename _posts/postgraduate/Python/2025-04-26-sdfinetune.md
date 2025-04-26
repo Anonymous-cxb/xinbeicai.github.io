@@ -1,3 +1,23 @@
+---
+layout: post
+title: "Stable Diffusion 微调方法"
+date: 2025-04-25 09:00:00 +0800 
+categories: 研究生涯
+tag: diffusionb
+---
+
+
+
+Stable Diffusion 是一种 **文本引导的潜空间扩散模型（Latent Diffusion Model, LDM）**
+
+
+
+
+
+
+
+>本文介绍了不同的stable diffusion的微调方法
+
 # Stable Diffusion 微调方法
 
 
