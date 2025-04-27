@@ -178,13 +178,53 @@ $$
 $$
 W' = W + \alpha \times (BA)
 $$
-一般 $\alpha = 0.5$ ~ $1.0$，可以调整以改变LoRA效果的强度。
+一般 $\alpha = 0.5$ ~ $1.0$​，可以调整以改变LoRA效果的强度。
+
+
+
+```python
+# ==== LoRA模块 (只针对Attention里的qkv) ====
+class LoRALinear(nn.Module):
+    def __init__(self, linear_layer, rank=4, scale=1.0):
+        super().__init__()
+        self.linear = linear_layer  # 原本的Linear层
+        self.rank = rank
+        self.scale = scale
+
+        self.lora_up = nn.Linear(linear_layer.in_features, rank, bias=False)
+        self.lora_down = nn.Linear(rank, linear_layer.out_features, bias=False)
+
+        nn.init.kaiming_uniform_(self.lora_up.weight, a=math.sqrt(5))
+        nn.init.zeros_(self.lora_down.weight)
+
+    def forward(self, x):
+        return self.linear(x) + self.scale * self.lora_down(self.lora_up(x))
+
+
+def apply_lora_to_unet(unet, rank=4, scale=1.0, device='cuda'):
+    # 先把整个unet所有参数冻结
+    for param in unet.parameters():
+        param.requires_grad = False
+
+    # 再在需要的地方加LoRA
+    for name, module in unet.named_modules():
+        if isinstance(module, SelfAttention):
+            module.in_proj = LoRALinear(module.in_proj, rank=rank, scale=scale).to(device)
+        elif isinstance(module, CrossAttention):
+            module.q_proj = LoRALinear(module.q_proj, rank=rank, scale=scale).to(device)
+            module.k_proj = LoRALinear(module.k_proj, rank=rank, scale=scale).to(device)
+            module.v_proj = LoRALinear(module.v_proj, rank=rank, scale=scale).to(device)
+```
 
 ------
 
+可以看到，也能训练出特定的<toy_cat>，但是grass的元素没有很好地展示出来，可能是因为<cat_toy>特征过于明显
+
+![lora_output](https://s2.loli.net/2025/04/27/RgPp5JHinYrqoF9.png)
+
 ### 总结
 
-> **LoRA 是通过小矩阵 $BA$ 替代大矩阵 $W$ 的微调方法，训练快、参数少，适合对 Stable Diffusion 进行定制和个性化优化。
+> LoRA 是通过小矩阵 $BA$ 替代大矩阵 $W$ 的微调方法，训练快、参数少，适合对 Stable Diffusion 进行定制和个性化优化。
 
 
 
