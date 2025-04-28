@@ -374,19 +374,7 @@ $$
 - **原本的UNet主干：** 保持预训练权重（可以冻结，也可以微调）
 - **Control分支：** 新加的，专门处理控制输入。
 
-整体大致是这样：
-
-```plaintext
-控制图 (m)
-   ↓
-一堆卷积 (小网络)
-   ↓
-控制特征
-   ↓
-+（加到） UNet的每一层特征上
-   ↓
-继续走 UNet 原通道
-```
+![img](https://github.com/lllyasviel/ControlNet/raw/main/github_page/he.png)
 
 ------
 
